@@ -1,0 +1,56 @@
+<div class="row">
+  <div class="section">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 col-sm-12 header">
+        <h2>Hi, I'm Guus <span role="img" aria-label="Emoji" (click)="shake()">👋</span></h2>
+        <p>
+          I am a software engineer with a focus on <b>backend systems</b> and <b>system architecture</b>. I have extensive experience designing and implementing <b>scalable</b> and <b>maintainable</b> software solutions.
+          In addition to my technical skills, I also enjoy sharing my knowledge with others through <b>trainings</b> and <b>interactive workshops</b>.
+          I believe that well-designed systems not only improve the user experience, but also make the development process more <b>efficient</b> and <b>enjoyable</b> for the team.
+          I am always seeking new challenges and opportunities to learn and grow as a software engineer.
+        </p>
+        <span>
+          <a class="external" href="mailto:guuslieben@xendox.com" target="_blank"><i class="fa-regular fa-paper-plane"></i> Mail</a>
+          <a class="external" href="https://github.com/guuslieben" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
+          <a class="external" href="https://linkedin.com/in/guuslieben" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+        </span>
+      </div>
+      <div class="col-auto"></div>
+    </div>
+  </div>
+  <div class="section">
+    <div class="row">
+      <div class="col-12">
+        <h4>Project highlight</h4>
+        <div class="project-highlight focus">
+          <h3>Hartshorn</h3>
+          <p>
+            Hartshorn is a modern JVM-based full stack Java framework. It is capable of aiding developers while building modular, testable, and scalable applications with support for Java and other JVM languages.<br>
+            Hartshorn aims to ease the creation and management of complex JVM applications, this is done by providing tools necessary to build these applications.
+          </p>
+          <div class="row">
+            <app-focus-element class="col-lg-3 col-md-2 col-sm-1" *ngFor="let aspect of highlightAspects"
+                               [element]="aspect"></app-focus-element>
+          </div>
+
+          <div style="margin-top: 10px;">
+            <a class="external" href="https://github.com/Dockbox-OSS/Hartshorn" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-auto"></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="row">
+      <div class="col-12">
+        <h4>Skills</h4>
+        <div class="row">
+          <app-focus-element class="col-lg-3 col-md-2 col-sm-1" *ngFor="let skill of skills"
+                             [element]="skill"></app-focus-element>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

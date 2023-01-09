@@ -1,0 +1,80 @@
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';
+
+:root {
+  --font-color-base: white;
+  --font-color-paragraph: #999eab;
+}
+
+// Body with dark and blue radial background, top right
+html, body {
+  background: radial-gradient(ellipse at top right, rgb(30, 42, 42) 0%, rgb(23,23,23) 100%);
+  margin: 0;
+  height: 100%;
+  padding: 5rem 3rem 0;
+}
+
+* {
+  font-family: Montserrat, serif;
+  color: var(--font-color-base);
+}
+
+.section {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 2.5rem 5rem;
+  //border: 1px dotted red;
+}
+
+a {
+  color: var(--font-color-base);
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.external {
+  margin-right: 25px;
+}
+
+.external::after {
+  content: ' ';
+  background: url("assets/svg/external.svg") no-repeat;
+  background-size: contain;
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  margin-left: 2px;
+}
+
+a:hover {
+  cursor: pointer;
+  color: var(--font-color-base);
+  border-bottom: 1px dashed var(--font-color-base);
+}
+
+.focus {
+  border: 1px solid hsla(0, 0%, 98%, .6);
+  background: rgba(255, 255, 255, .05);
+  border-radius: .25rem;
+  padding: .5rem 1rem;
+}
+
+.focus-hoverable {
+  @extend .focus;
+  transition: all .2s ease-in-out;
+}
+
+.shake {
+  overflow: hidden;
+  animation: tilt-shaking 0.25s infinite;
+}
+
+@keyframes tilt-shaking {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(1deg); }
+  50% { transform: rotate(0); }
+  75% { transform: rotate(-1deg); }
+  100% { transform: rotate(0deg); }
+}
