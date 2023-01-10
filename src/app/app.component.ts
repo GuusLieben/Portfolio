@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, ElementRef, ViewChild} from '@angular/core';
 import {Skill, skills} from "./skills";
 import {FocusElement} from "./focus-element/focus-element.component";
 
@@ -8,6 +8,9 @@ import {FocusElement} from "./focus-element/focus-element.component";
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+
+  @ViewChild('shakeSpan')
+  shakeSpan?: ElementRef;
 
   skills: Skill[] = skills;
 
