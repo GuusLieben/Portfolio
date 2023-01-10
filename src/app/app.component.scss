@@ -32,3 +32,11 @@
 .project-highlight h3 {
   font-weight: bold;
 }
+
+.project-highlight p {
+  color: var(--font-color-highlight-paragraph);
+}
+
+.project-highlight p b {
+   color: var(--font-color-base);
+ }

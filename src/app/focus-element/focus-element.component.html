@@ -5,8 +5,13 @@
     </div>
     <div class="col-auto" style="padding-right: 25px;">
       <div>
-        <span><strong>{{element!.title}}</strong></span><br>
-        <span><small>{{element!.description}}</small></span>
+        <a href="{{element!.url}}" class="external" target="_blank" *ngIf="element?.url; else title">
+          <ng-container *ngTemplateOutlet="title"></ng-container>
+        </a>
+        <ng-template #title>
+          <span><strong>{{element!.title}}</strong></span>
+        </ng-template>
+        <br><span><small [class]="truncate ? 'truncate-two-lines' : ''">{{element!.description}}</small></span>
       </div>
     </div>
   </div>

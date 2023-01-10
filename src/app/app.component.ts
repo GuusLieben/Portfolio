@@ -19,12 +19,13 @@ export class AppComponent {
     },
     {
       title: 'Component Lifecycle',
-      description: 'TBD',
+      description: 'Hartshorn provides a powerful component lifecycle system that allows components to be created, destroyed, managed, and observed with ease.',
       image: 'assets/svg/cycle.svg',
     }, {
       title: 'Custom Expression Language',
       description: 'HSL is a custom scripting- and expression language that was designed to be used in Hartshorn applications.',
       image: 'assets/svg/language.svg',
+      url: 'https://github.com/Dockbox-OSS/Hartshorn/pull/771',
     }, {
       title: 'Scalable',
       description: 'Hartshorn is designed to be scalable, this is done by providing a modular and efficient application architecture',

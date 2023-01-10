@@ -26,11 +26,15 @@
         <div class="project-highlight focus">
           <h3>Hartshorn</h3>
           <p>
-            Hartshorn is a modern JVM-based full stack Java framework. It is capable of aiding developers while building modular, testable, and scalable applications with support for Java and other JVM languages.<br>
-            Hartshorn aims to ease the creation and management of complex JVM applications, this is done by providing tools necessary to build these applications.
+            Since 2019 I have been working on <strong>Hartshorn</strong>, a framework for building modular applications in Java. Hartshorn is designed to be a <strong>lightweight</strong> and <strong>flexible</strong> framework that can be used to build any kind of application.
+            It is capable of aiding developers while building <strong>modular</strong>, <strong>testable</strong>, and <strong>scalable</strong> applications with support for Java and other JVM languages. Over the years I have used this project to <strong>learn</strong> and <strong>experiment</strong> with new technologies and concepts.
+            <br><br>
+            Since then, I have set out to make Hartshorn a fully-fledged framework, with a focus on <strong>modularity</strong>, <strong>extensibility</strong>, and <strong>ease of use</strong>. Because of this goal I have set up complete workflow guidelines, together with a set of tools to aid in the development process.
+            These tools include <strong>complex CI workflows</strong>, <strong>automated license and dependency validation</strong>, and custom Gradle plugins to support Java API <strong>test automation</strong>.
           </p>
           <div class="row">
             <app-focus-element class="col-lg-3 col-md-6 col-sm-12" *ngFor="let aspect of highlightAspects"
+                               [truncate]="true"
                                [element]="aspect"></app-focus-element>
           </div>
 

@@ -10,10 +10,14 @@ export class FocusElementComponent {
   @Input()
   public element?: FocusElement;
 
+  @Input()
+  public truncate: boolean = false;
+
 }
 
 export type FocusElement = {
   title: string;
   image: string;
   description: string;
+  url?: string;
 }
