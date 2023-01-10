@@ -19,6 +19,10 @@ html, body {
   color: var(--font-color-base);
 }
 
+.no-cursor {
+  cursor: none;
+}
+
 .section {
   width: 100%;
   height: 100%;
@@ -51,7 +55,11 @@ a {
 a:hover {
   cursor: pointer;
   color: var(--font-color-base);
-  border-bottom: 1px dashed var(--font-color-base);
+  border-bottom: 2px dashed var(--font-color-base);
+}
+
+.no-cursor a:hover {
+  cursor: none;
 }
 
 .focus {
