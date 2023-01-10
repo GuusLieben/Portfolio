@@ -5,12 +5,14 @@ import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FocusElementComponent } from './focus-element/focus-element.component';
 import { CursorComponent } from './cursor/cursor.component';
+import { TimelineComponent } from './timeline/timeline.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FocusElementComponent,
-    CursorComponent
+    CursorComponent,
+    TimelineComponent
   ],
   imports: [
     BrowserModule,
