@@ -4,11 +4,12 @@
 :root {
   --font-color-base: white;
   --font-color-paragraph: #999eab;
+  --font-color-highlight-paragraph: #babdc4;
 }
 
 // Body with dark and blue radial background, top right
 html, body {
-  background: radial-gradient(ellipse at top right, rgb(30, 42, 42) 0%, rgb(23,23,23) 100%);
+  background: radial-gradient(ellipse at top right, rgb(30, 42, 42) 0%, rgb(23, 23, 23) 100%) no-repeat fixed;
   margin: 0;
   height: 100%;
   padding: 5rem 3rem 0;
