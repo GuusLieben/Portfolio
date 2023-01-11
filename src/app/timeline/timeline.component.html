@@ -1,4 +1,23 @@
-<ul class="timeline">
-  <li class="timeline-event" *ngFor="let entry of entries">
-  </li>
-</ul>
+<div class="timeline">
+  <ul>
+    <li *ngFor="let entry of entries">
+      <span></span>
+      <div>
+        <div class="title">
+          <img [src]="entry.logo"/><br>
+          <span>{{entry.name}} <small class="timespan" *ngIf="entry.period">( {{formatPeriod(entry.period)}} )</small></span>
+        </div>
+        <div class="type" *ngIf="entry.location"><i class="fa-solid fa-location-dot"></i> {{entry.location}}</div>
+        <div class="info" *ngFor="let activity of entry.activities">
+          <strong>{{activity.title}}</strong><small class="timespan">( {{formatPeriod(activity.period)}} )</small><br>
+          <span class="description" *ngIf="activity.description">{{activity.description}}</span>
+          <span class="keywords" *ngIf="activity.keywords && activity.keywords.length > 0">
+            <ul>
+              <li *ngFor="let keyword of activity.keywords">{{keyword}}</li>
+            </ul>
+          </span>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>

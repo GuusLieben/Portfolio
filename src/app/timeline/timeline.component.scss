@@ -1,4 +1,124 @@
-.timeline {
-.timeline-event {
+.timeline ul {
+  margin: 2rem 0 0;
+  list-style: none;
+  position: relative;
+  padding: 1px 25px 1px 50px;
 }
+
+.timeline ul:before {
+  content: "";
+  width: 1px;
+  height: 100%;
+  position: absolute;
+}
+
+.timeline ul li {
+  position: relative;
+  margin-left: 30px;
+  padding: 14px 14px 30px;
+  border-radius: 6px;
+}
+
+.timeline ul li > span {
+  width: 2px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  left: -30px;
+  top: 0;
+  position: absolute;
+}
+
+.timeline ul li > span:before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  position: absolute;
+  background: #fff;
+  left: -7px;
+  top: calc(14px + .5rem);
+}
+
+.timeline ul li > span:hover:before {
+  content: "";
+  width: 25px;
+  height: 15px;
+  border-radius: 15px;
+  border: 2px solid #fff;
+  position: absolute;
+  background: #fff;
+  left: -7px;
+  top: calc(14px + .5rem);
+}
+
+.timeline ul li span:after {
+  top: 100%;
+}
+
+.timeline ul li > div {
+  margin-left: 10px;
+}
+
+.timeline div .title {
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.timeline div .title img {
+  height: 35px;
+  width: auto;
+  margin-bottom: 5px;
+}
+
+.timespan {
+  font-weight: 600;
+  color: #ccc;
+}
+
+.title .timespan {
+  font-size: 55%;
+}
+
+.info .timespan {
+  margin-left: 5px;
+}
+
+.timeline div .type {
+  font-size: 0.8rem;
+  color: #fff;
+}
+
+.timeline div .type i {
+  margin-right: 5px;
+}
+
+.timeline div .info {
+  margin-top: 1rem;
+  font-weight: 300;
+  font-size: .9rem;
+}
+
+.timeline div .info strong {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.timeline div .info .description {
+  color: #ddd;
+}
+
+.timeline div .info .keywords ul {
+  list-style: outside;
+  padding: 0;
+  margin-top: 5px;
+}
+
+.timeline div .info .keywords li {
+  padding: 0;
+  color: #ddd;
+}
+
+.timeline div > div {
+  margin-top: 5px;
 }
