@@ -2,7 +2,8 @@ import {Component, ElementRef, ViewChild} from '@angular/core';
 import {Skill, skills} from "./skills";
 import {FocusElement} from "./focus-element/focus-element.component";
 import {experience} from "./experience";
-import {TimelineEntry} from "./timeline/timeline.component";
+import {TimelineActivity, TimelineEntry} from "./timeline/timeline.component";
+import {education} from "./education";
 
 @Component({
   selector: 'app-root',
@@ -16,6 +17,7 @@ export class AppComponent {
 
   skills: Skill[] = skills;
   experience: TimelineEntry[] = experience;
+  education: TimelineEntry[] = education;
 
   highlightAspects: [FocusElement, FocusElement, FocusElement, FocusElement] = [
     {
