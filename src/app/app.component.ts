@@ -2,8 +2,9 @@ import {Component, ElementRef, ViewChild} from '@angular/core';
 import {Skill, skills} from "./skills";
 import {FocusElement} from "./focus-element/focus-element.component";
 import {experience} from "./experience";
-import {TimelineActivity, TimelineEntry} from "./timeline/timeline.component";
+import {TimelineEntry} from "./timeline/timeline.component";
 import {education} from "./education";
+import {CursorComponent} from "./cursor/cursor.component";
 
 @Component({
   selector: 'app-root',
@@ -14,6 +15,9 @@ export class AppComponent {
 
   @ViewChild('shakeSpan')
   shakeSpan?: ElementRef;
+
+  @ViewChild('cursor')
+  cursor?: CursorComponent;
 
   skills: Skill[] = skills;
   experience: TimelineEntry[] = experience;
@@ -40,11 +44,22 @@ export class AppComponent {
       image: 'assets/svg/scale.svg',
     }
   ]
+  projects: any[] = [
+    {
+      name: 'Hartshorn',
+      description: 'Hartshorn is a powerful Java application framework that provides a powerful dependency injection system, component lifecycle, and more.',
+      location: 'GitHub'
+    },
+  ];
 
   shake() {
     document.body.classList.add('shake');
     setTimeout(() => {
       document.body.classList.remove('shake');
     }, 1000);
+  }
+
+  getYear() {
+    return new Date().getFullYear();
   }
 }

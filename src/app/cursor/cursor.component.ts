@@ -34,20 +34,20 @@ export class CursorComponent implements AfterViewInit {
   onMouseMove(event: MouseEvent) {
     if (this.bigBall) {
       gsap.to(this.bigBall.nativeElement, .4, {
-        x: event.clientX - 15,
-        y: event.clientY - 15
+        x: event.clientX - 20,
+        y: event.clientY - 20
       });
     }
 
     if (this.smallBall) {
       gsap.to(this.smallBall.nativeElement, .1, {
         x: event.clientX - 5,
-        y: event.clientY - 7
+        y: event.clientY - 12
       });
     }
   }
 
-  private adaptLinks() {
+  public adaptLinks() {
     const links = document.body.getElementsByTagName('a');
     for (let i = 0; i < links.length; i++) this.adaptElement(links[i], 4);
   }

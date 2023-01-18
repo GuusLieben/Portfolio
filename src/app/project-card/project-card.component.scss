@@ -1,0 +1,137 @@
+.row {
+  margin-top: 2rem;
+}
+
+.project-description {
+  margin-bottom: 10rem;
+}
+
+.pre-icon {
+  color: #aaa;
+  margin-right: 5px;
+}
+
+.history ul {
+  margin: 2rem 0 0;
+  list-style: none;
+  position: relative;
+  padding: 1px 25px 1px 50px;
+}
+
+.history ul:before {
+  content: "";
+  width: 1px;
+  height: 100%;
+  position: absolute;
+}
+
+.history ul li {
+  position: relative;
+  margin-left: 30px;
+  padding: 14px 14px 30px;
+  border-radius: 6px;
+}
+
+.history ul li > span {
+  width: 2px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  left: -30px;
+  top: 0;
+  position: absolute;
+}
+
+.history ul li > span:before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  position: absolute;
+  background: #fff;
+  left: -7px;
+  top: calc(14px + .5rem);
+}
+
+.history ul li > span:hover:before {
+  content: "";
+  width: 25px;
+  height: 15px;
+  border-radius: 15px;
+  border: 2px solid #fff;
+  position: absolute;
+  background: #fff;
+  left: -7px;
+  top: calc(14px + .5rem);
+}
+
+.history ul li span:after {
+  top: 100%;
+}
+
+.history ul li > div {
+  margin-left: 10px;
+}
+
+.history div .project {
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.history div .project img {
+  height: 35px;
+  width: auto;
+  margin-bottom: 5px;
+}
+
+.sha {
+  font-weight: 600;
+  color: #ccc;
+}
+
+.project .sha {
+  font-size: 55%;
+}
+
+.message .sha {
+  margin-left: 5px;
+}
+
+.history div .type {
+  font-size: 0.8rem;
+  color: #fff;
+}
+
+.history div .type i {
+  margin-right: 5px;
+}
+
+.history div .message {
+  margin-top: 1rem;
+  font-weight: 300;
+  font-size: .9rem;
+}
+
+.history div .message strong {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.history div .message .description {
+  color: #ddd;
+}
+
+.history div .message .keywords ul {
+  list-style: outside;
+  padding: 0;
+  margin-top: 5px;
+}
+
+.history div .message .keywords li {
+  padding: 0;
+  color: #ddd;
+}
+
+.history div > div {
+  margin-top: 5px;
+}

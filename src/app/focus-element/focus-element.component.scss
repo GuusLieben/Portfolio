@@ -1,29 +1,3 @@
-.focus-element {
-  border: 1px solid hsla(0, 0%, 98%, .4);
-  border-radius: .25rem;
-  padding: .5rem 1rem;
-  transition: all .2s ease-in-out;
-  font-size: 14px;
-  align-items: stretch;
-  flex-wrap: nowrap;
-}
-
-.focus-element:hover {
-  border: 1px solid hsla(0, 0%, 98%, .8);
-}
-
-.focus-element small {
-  font-size: 12px;
-}
-
-.focus-element img {
-  $icon-size: 25px;
-
-  float: left;
-  width: $icon-size;
-  height: $icon-size;
-}
-
 .icon-wrapper {
   padding-left: 5px;
   display: flex;

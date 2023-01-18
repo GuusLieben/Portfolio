@@ -18,6 +18,7 @@ html, body {
 * {
   font-family: Montserrat, serif;
   color: var(--font-color-base);
+  //border: 1px dotted red;
 }
 
 .no-cursor {
@@ -30,7 +31,6 @@ html, body {
   display: flex;
   flex-direction: column;
   padding: 2.5rem 5rem;
-  //border: 1px dotted red;
 }
 
 a {
@@ -86,4 +86,30 @@ a:hover {
   50% { transform: rotate(0); }
   75% { transform: rotate(-1deg); }
   100% { transform: rotate(0deg); }
+}
+
+.focus-element {
+  border: 1px solid hsla(0, 0%, 98%, .4);
+  border-radius: .25rem;
+  padding: .5rem 1rem;
+  transition: all .2s ease-in-out;
+  font-size: 14px;
+  align-items: stretch;
+  flex-wrap: nowrap;
+}
+
+.focus-element:hover {
+  border: 1px solid hsla(0, 0%, 98%, .8);
+}
+
+.focus-element small {
+  font-size: 12px;
+}
+
+.focus-element img {
+  $icon-size: 25px;
+
+  float: left;
+  width: $icon-size;
+  height: $icon-size;
 }

@@ -1,0 +1,45 @@
+<div class="row">
+  <div class="col-lg-6 col-md-6 col-sm-12">
+    <h4>Recently updated projects</h4>
+    <div class="row">
+      <div *ngFor="let project of data | slice:0:limit.projects" class="col-12">
+        <div class="focus-element" style="margin-bottom: 1rem;">
+          <div style="font-size: 1.5rem;">
+            <span><a href="{{project.html_url}}" class="external" target="_blank">{{project.name}}</a></span>
+          </div>
+          <div class="info">
+            <span>{{project.full_name}}</span><br><br>
+            <span class="project-description">{{project.description ?? "No description provided"}}</span><br><br>
+            <small>
+              <i class="fa-regular fa-file-code pre-icon"></i> {{project.language ?? "Unknown language(s)"}}<br>
+              <i class="fa-solid fa-code-commit pre-icon"></i>Last updated on {{formatTimestamp(project.updated_at)}}
+            </small>
+          </div>
+        </div>
+      </div>
+      <small *ngIf="data.length > limit.projects">.. and {{data.length - limit.projects}} more</small>
+    </div>
+  </div>
+  <div class="col-lg-6 col-md-6 col-sm-12">
+    <h4>Recent commits</h4>
+    <div class="history">
+      <ul>
+        <li *ngFor="let entry of commits | keyvalue">
+          <span></span>
+          <div>
+            <div class="project">
+              <span><a href="{{entry.value.url}}" class="external" target="_blank">{{sanitize(entry.key)}}</a></span>
+            </div>
+            <div class="message" *ngFor="let commit of entry.value.commits | slice:0:limit.commits">
+              <a href="{{commit.url}}" class="external" target="_blank"><strong>{{commit.message}}</strong><small
+                class="sha">{{commit.sha}}</small></a>
+            </div>
+            <div class="info" *ngIf="entry.value.commits.length > limit.commits">
+              <small>.. and {{entry.value.commits.length - limit.commits}} more</small>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

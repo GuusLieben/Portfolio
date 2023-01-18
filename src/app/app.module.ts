@@ -6,17 +6,21 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FocusElementComponent } from './focus-element/focus-element.component';
 import { CursorComponent } from './cursor/cursor.component';
 import { TimelineComponent } from './timeline/timeline.component';
+import { ProjectCardComponent } from './project-card/project-card.component';
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
     AppComponent,
     FocusElementComponent,
     CursorComponent,
-    TimelineComponent
+    TimelineComponent,
+    ProjectCardComponent,
   ],
   imports: [
     BrowserModule,
-    NgbModule
+    NgbModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
